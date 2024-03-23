@@ -18,6 +18,34 @@ const answers = await inquirer.prompt([{
 if (answers.userGuess === randomNumber) {
     console.log("Congratulations! you guessed the right number");
 }
-else {
-    console.log("Your guess is not correct! try again ");
+else if (answers.userGuess + 1 === randomNumber) {
+    console.log("You are just one digit behind");
 }
+else if (answers.userGuess + 2 === randomNumber) {
+    console.log("You are two digits behind");
+}
+else if (answers.userGuess + 3 === randomNumber) {
+    console.log("You are three digits behind");
+}
+else if (answers.userGuess + 4 === randomNumber) {
+    console.log("You are four digits behind");
+}
+else if (answers.userGuess + 5 === randomNumber) {
+    console.log("You are five digits behind");
+}
+else if (answers.userGuess - 1 === randomNumber) {
+    console.log("You are just 1 digit ahead");
+}
+else if (answers.userGuess - 2 === randomNumber) {
+    console.log("You are two digits ahead");
+}
+else if (answers.userGuess - 3 === randomNumber) {
+    console.log("You are three digits ahead");
+}
+else if (answers.userGuess - 4 === randomNumber) {
+    console.log("You are four digit ahead");
+}
+else if (answers.userGuess - 5 === randomNumber) {
+    console.log("You are five digits ahead");
+}
+console.log(`Number was: ${randomNumber} and you guesseed: ${answers.userGuess}`);
