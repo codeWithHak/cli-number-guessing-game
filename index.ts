@@ -2,15 +2,7 @@
 
 import inquirer from "inquirer"
 
-// 1) Computer will geerate a random number
-
-// 2) user's input/guess
-
-// 3) compare both numbers
-
-
 const randomNumber = (Math.floor(Math.random() * 6 + 1))
-
 
 const answers = await inquirer.prompt([{
     name:"userGuess",
@@ -19,28 +11,27 @@ const answers = await inquirer.prompt([{
 }])
 
 
-
 if (answers.userGuess === randomNumber) {
     console.log("Congratulations! you guessed the right number");
 }
 
 else if (answers.userGuess +1 === randomNumber){
-    console.log("You are just one digit behind");
+    console.log("Try Again! You are just one digit behind");
     
 }
 
 else if (answers.userGuess +2 === randomNumber){
-    console.log("You are two digits behind");
+    console.log("Try Again! You are two digits behind");
     
 }
 
 else if (answers.userGuess +3 === randomNumber){
-    console.log("You are three digits behind");
+    console.log("Try Again! You are three digits behind");
     
 }
 
 else if (answers.userGuess + 4 === randomNumber){
-    console.log("You are four digits behind");
+    console.log("Try Again! You are four digits behind");
     
 }
 
@@ -55,26 +46,25 @@ else if (answers.userGuess -1 === randomNumber){
 }
 
 else if (answers.userGuess -2 === randomNumber){
-    console.log("You are two digits ahead");
+    console.log("Try Again! You are two digits ahead");
     
 }
 
 else if (answers.userGuess -3 === randomNumber){
-    console.log("You are three digits ahead");
+    console.log("Try Again! You are three digits ahead");
     
 }
 
 else if (answers.userGuess -4 === randomNumber){
-    console.log("You are four digit ahead");
+    console.log("Try Again! You are four digit ahead");
     
 }
 
 else if (answers.userGuess -5 === randomNumber){
-    console.log("You are five digits ahead");
+    console.log("Try Again! You are five digits ahead");
     
 }
 
 console.log(`Number was: ${randomNumber} and you guesseed: ${answers.userGuess}`);
-
 
 
